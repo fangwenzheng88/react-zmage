@@ -2,12 +2,13 @@
 
 .imageLayer {
     user-select: none;
-    // transition: transform @animationDuration @animationFunction, opacity @animationDuration @animationFunction, clip-path @animationDuration @animationFunction;
+    transition: transform @animationDuration @animationFunction, opacity @animationDuration @animationFunction, clip-path @animationDuration @animationFunction;
     position: absolute;
     left: 50%;
     top: 50%;
     will-change: transform, top, opacity, clip-path;
-
+    max-width: 100%;
+    max-height: 100%;
     &.zooming {
         transition-timing-function: @animationFunctionOnZooming;
         // 修复 IE 下位移卡顿问题
